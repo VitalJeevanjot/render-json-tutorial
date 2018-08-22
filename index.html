@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <div id="js"></div>
+  <script type="text/javascript" src="renderjson.js"></script>
+
+  <script>
+    document.getElementById("js").appendChild(
+      renderjson({
+        hello: [1, 2, 3, 4],
+        there: {
+          a: 1,
+          b: 2,
+          c: ["hello", null]
+        }
+      })
+    );
+  </script>
+
+  <script>
+  renderjson.set_icons('+', '-');
+  </script>
+</body>
+</html>
